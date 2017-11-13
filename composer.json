@@ -1,0 +1,23 @@
+{
+    "name": "juliardi/yii2-captcha",
+    "description": "Captcha library wrapper for Yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","captcha"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Safri Juliardi",
+            "email": "ardi93@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "gregwar/captcha": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Juliardi\\Captcha\\": "src"
+        }
+    }
+}
+ 
