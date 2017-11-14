@@ -55,6 +55,8 @@ class CaptchaAction extends Action {
     public function run() {
         $this->captchaBuilder->build($this->width, $this->height);
         $this->saveCaptcha();
+        $this->setHttpHeaders();
+        Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
         $this->captchaBuilder->output();
     }
 
@@ -103,5 +105,18 @@ class CaptchaAction extends Action {
         $valid = $caseSensitive ? ($input === $captchaPhrase) : strcasecmp($input, $captchaPhrase) === 0;
 
         return $valid;
+    }
+
+    /**
+     * Sets the HTTP headers needed by image response.
+     */
+    protected function setHttpHeaders()
+    {
+        Yii::$app->getResponse()->getHeaders()
+            ->set('Pragma', 'public')
+            ->set('Expires', '0')
+            ->set('Cache-Control', 'must-revalidate, post-check=0, pre-check=0')
+            ->set('Content-Transfer-Encoding', 'binary')
+            ->set('Content-type', 'image/png');
     }
 }
