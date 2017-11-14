@@ -1,6 +1,6 @@
 <?php
 
-namespace Juliardi\Captcha;
+namespace juliardi\captcha;
 
 use yii\widgets\InputWidget;
 use yii\helpers\Html;

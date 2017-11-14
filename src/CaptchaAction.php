@@ -1,6 +1,6 @@
 <?php
 
-namespace Juliardi\Captcha;
+namespace juliardi\captcha;
 
 use Gregwar\Captcha\CaptchaBuilder;
 use yii\base\Action;

@@ -28,7 +28,7 @@ public function actions()
 {
     return [
         'captcha' => [
-            'class' => 'Juliardi\Captcha\CaptchaAction',
+            'class' => 'juliardi\captcha\CaptchaAction',
             //'length' => 5, // captcha character count
             //'width' => 150, // width of generated captcha image
             //'height' => 40, // height of generated captcha image
@@ -47,7 +47,7 @@ An integer value to set the height of generated CAPTCHA image
 ##### View file
 Add the following code to your view to render CAPTCHA image and input. 
 ```php
-use Juliardi\Captcha\Captcha;
+use juliardi\captcha\Captcha;
 ...
 <?php echo Captcha::widget([
     'model' => $model,
@@ -61,7 +61,7 @@ use Juliardi\Captcha\Captcha;
 ```
 You can also use ActiveForm instance to render CAPTCHA input.
 ```php
-use Juliardi\Captcha\Captcha;
+use juliardi\captcha\Captcha;
 ...
 <?php echo $form->field($model, 'captcha')->widget(Captcha::className()) ?>
 
@@ -77,7 +77,7 @@ the HTML attributes for the input tag.
 ##### Validation
 Add the following rule to your model to validate the captcha input :
 ```php
-use Juliardi\Captcha\CaptchaValidator;
+use juliardi\captcha\CaptchaValidator;
 ...
 public function rules()
 {

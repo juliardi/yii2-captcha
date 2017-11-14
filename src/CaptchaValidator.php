@@ -1,6 +1,6 @@
 <?php
 
-namespace Juliardi\Captcha;
+namespace juliardi\captcha;
 
 use Yii;
 use yii\base\InvalidConfigException;
