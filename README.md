@@ -32,6 +32,7 @@ public function actions()
             //'length' => 5, // captcha character count
             //'width' => 150, // width of generated captcha image
             //'height' => 40, // height of generated captcha image
+            //'quality' => 100, // quality of generated captcha image
         ],
     ];
 }
@@ -43,6 +44,8 @@ An integer value to set the generated CAPTCHA character count
 An integer value to set the width of generated CAPTCHA image
 - `height`
 An integer value to set the height of generated CAPTCHA image
+- `quality`
+An integer value to set the quality of generated CAPTCHA image
 
 ##### View file
 Add the following code to your view to render CAPTCHA image and input. 
