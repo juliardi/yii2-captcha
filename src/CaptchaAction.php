@@ -31,6 +31,12 @@ class CaptchaAction extends Action {
     public $length = 5;
 
     /**
+     * Generated image quality
+     * @var integer
+     */
+    public $quality = 80;
+
+    /**
      * CaptchaBuilder instance
      *
      * @var \Gregwar\Captcha\CaptchaBuilder
@@ -56,8 +62,9 @@ class CaptchaAction extends Action {
         $this->captchaBuilder->build($this->width, $this->height);
         $this->saveCaptcha();
         $this->setHttpHeaders();
+
         Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
-        $this->captchaBuilder->output();
+        return $this->captchaBuilder->get($this->quality);
     }
 
     /**
@@ -117,6 +124,6 @@ class CaptchaAction extends Action {
             ->set('Expires', '0')
             ->set('Cache-Control', 'must-revalidate, post-check=0, pre-check=0')
             ->set('Content-Transfer-Encoding', 'binary')
-            ->set('Content-type', 'image/png');
+            ->set('Content-type', 'image/jpeg');
     }
 }
