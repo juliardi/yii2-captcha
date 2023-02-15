@@ -4,7 +4,6 @@ namespace juliardi\captcha;
 
 use Yii;
 use yii\base\InvalidConfigException;
-use yii\validators\ValidationAsset;
 use yii\validators\Validator;
 
 class CaptchaValidator extends Validator

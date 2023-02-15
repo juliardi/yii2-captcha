@@ -3,9 +3,9 @@
 namespace juliardi\captcha;
 
 use Gregwar\Captcha\CaptchaBuilder;
+use Gregwar\Captcha\PhraseBuilder;
 use yii\base\Action;
 use Yii;
-use Gregwar\Captcha\PhraseBuilder;
 
 class CaptchaAction extends Action {
 
@@ -57,7 +57,7 @@ class CaptchaAction extends Action {
         $this->phraseBuilder = new PhraseBuilder($this->length);
         $this->captchaBuilder = new CaptchaBuilder(null, $this->phraseBuilder);
     }
-    
+
     public function run() {
         $this->captchaBuilder->build($this->width, $this->height);
         $this->saveCaptcha();
