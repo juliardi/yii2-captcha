@@ -12,7 +12,7 @@ use yii\web\Response;
 /**
  * CaptchaAction renders a CAPTCHA image.
  *
- * CaptchaAction is used together with [[Captcha]] and [[\yii\juliardi\CaptchaValidator]]
+ * CaptchaAction is used together with [[Captcha]] and [[\juliardi\captcha\CaptchaValidator]]
  * to provide the [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA) feature.
  *
  * By configuring the properties of CaptchaAction, you may customize the appearance of
