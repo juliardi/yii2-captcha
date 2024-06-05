@@ -18,6 +18,10 @@
         "psr-4": {
             "juliardi\\captcha\\": "src"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
     }
 }
- 
